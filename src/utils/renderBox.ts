@@ -111,7 +111,7 @@ const mv = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26
 // }
 
 export let numberTextsForCurrentFrame: string[] = [];
-let detectionCounter = 0;
+
 
 export function renderBoxes(canvasRef: HTMLCanvasElement, boxes_data: Float32Array | Int32Array | Uint8Array, scores_data: Float32Array | Int32Array | Uint8Array, classes_data: Float32Array | Int32Array | Uint8Array, ratios: any[]) {
   const ctx = canvasRef.getContext('2d');
@@ -197,34 +197,35 @@ export function renderBoxes(canvasRef: HTMLCanvasElement, boxes_data: Float32Arr
       const Rangey1 = 280;
       const Rangey2 = 480;
 
-     // Draw blue dot for x1Range
-     ctx.beginPath();
-     ctx.arc((Rangex1) / 2, (Rangey1) / 2, 5, 0, 2 * Math.PI);
-     ctx.fillStyle = 'red';
-     ctx.fillText("1", 180, 180)
-     ctx.fill();
+      let detectionCounter = 0;
 
-     // Draw blue dot for x2Range
-     ctx.beginPath();
-     ctx.arc((Rangex2) / 2, (Rangey1) / 2, 5, 0, 2 * Math.PI);
-     ctx.fillStyle = 'red';
-     ctx.fillText("2", 300, 310)
-     ctx.fill();
-
-     // Draw blue dot for y1Range
-     ctx.beginPath();
-     ctx.arc((Rangex1) / 2, (Rangey2) / 2, 5, 0, 2 * Math.PI);
-     ctx.fillStyle = 'red';
-     ctx.fillText("3", 180, 310)
-     ctx.fill();
-
-     // Draw blue dot for y2Range
-     ctx.beginPath();
-     ctx.arc((Rangex2) / 2, (Rangey2) / 2, 5, 0, 2 * Math.PI);
-     ctx.fillStyle = 'red';
-     ctx.fillText("4", 310, 180)
-     ctx.fill();
-
+       // Draw blue dot for Rangex1
+       ctx.beginPath();
+       ctx.arc((Rangex1 + Rangex2) / 2, (Rangey1 + Rangey2) / 2, 5, 0, 2 * Math.PI);
+       ctx.fillStyle = 'blue';
+       ctx.fillText("5", 320, 400)
+       ctx.fill();
+ 
+       // Draw blue dot for Rangex2
+       ctx.beginPath();
+       ctx.arc((Rangex2 + Rangex2) / 2, (Rangey1 + Rangey2) / 2, 5, 0, 2 * Math.PI);
+       ctx.fillStyle = 'blue';
+       ctx.fillText("6", 450, 400)
+       ctx.fill();
+ 
+       // Draw blue dot for Rangey1
+       ctx.beginPath();
+       ctx.arc((Rangex1 + Rangex2) / 2, (Rangey1 + Rangey2) / 2, 5, 0, 2 * Math.PI);
+       ctx.fillStyle = 'blue';
+       ctx.fillText("7", 320, 530)
+       ctx.fill();
+ 
+       // Draw blue dot for Rangey2
+       ctx.beginPath();
+       ctx.arc((Rangex2 + Rangex2) / 2, (Rangey1 + Rangey2) / 2, 5, 0, 2 * Math.PI);
+       ctx.fillStyle = 'blue';
+       ctx.fillText("8", 450, 530)
+       ctx.fill();
 
      if (
       x1 >= Rangex1 &&
