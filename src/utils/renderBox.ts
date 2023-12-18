@@ -141,10 +141,10 @@ export function renderBoxes(canvasRef: HTMLCanvasElement, boxes_data: Float32Arr
 
       // console.log(x1,x2,y1,y2)
 
-      const x1Range = {min: 150, max: 180}
-      const x2Range = {min: 310, max: 340}
-      const y1Range = {min: 220, max: 240}
-      const y2Range = {min: 325, max: 345}
+      const x1Range = {min: 245, max: 260}
+      const x2Range = {min: 385, max: 400}
+      const y1Range = {min: 165, max: 180}
+      const y2Range = {min: 275, max: 290}
 
      // Draw blue dot for x1Range
      ctx.beginPath();
@@ -186,6 +186,8 @@ export function renderBoxes(canvasRef: HTMLCanvasElement, boxes_data: Float32Arr
           y2 <= y2Range.max 
       ) {
         alert("Your marker is in the perfect position")
+        ctx.fillStyle = 'green';
+        ctx.fill();
       }
 
 
