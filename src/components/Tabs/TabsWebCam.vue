@@ -75,7 +75,7 @@ function onVideoPlayDetect() {
     </div>
     <div v-show="enabled" class="relative h-full w-full">
       <video ref="videoRef" class="h-full w-full md:h-full w-full bg-coontain" autoplay playsinline @play="onVideoPlayDetect"></video>
-      <img src="https://www.freeiconspng.com/thumbs/grid-png/transparent-grid-overlay-png-23.png"
+      <img src="https://cdn.glitch.global/4a4fdfdb-83d7-4c92-afd1-8f02869db8e9/Group%20671.png?v=1702904920472"
         alt=""
         class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
         :width="inputShape[1]"
