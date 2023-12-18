@@ -133,6 +133,12 @@ export function renderBoxes(canvasRef: HTMLCanvasElement, boxes_data: Float32Arr
       const width = x2 - x1;
       const height = y2 - y1;
 
+      ctx.fillStyle = 'black';
+      ctx.fillText(`1: ${x1.toFixed(2)}`, x1, y1);
+      ctx.fillText(`2: ${x2.toFixed(2)}`, x2, y2);
+      ctx.fillText(`3: ${y1.toFixed(2)}`, x1, y1 - 20);
+      ctx.fillText(`4: ${y2.toFixed(2)}`, x2, y2 - 20);
+
       // console.log(x1,x2,y1,y2)
 
       const x1Range = {min: 40, max: 160}
