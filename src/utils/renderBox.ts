@@ -192,55 +192,58 @@ export function renderBoxes(canvasRef: HTMLCanvasElement, boxes_data: Float32Arr
 
 
       //FInger nails Calibration Logic
-      const Rangex1 = 30
-      const Rangex2 = 590
-      const Rangey1 = 390
-      const Rangey2 = 560
+      const Rangex1 = 200;
+      const Rangex2 = 400;
+      const Rangey1 = 390;
+      const Rangey2 = 500;
 
      // Draw blue dot for x1Range
      ctx.beginPath();
      ctx.arc((Rangex1) / 2, (Rangey1) / 2, 5, 0, 2 * Math.PI);
-     ctx.fillStyle = 'blue';
+     ctx.fillStyle = 'red';
      ctx.fillText("1", 180, 180)
      ctx.fill();
 
      // Draw blue dot for x2Range
      ctx.beginPath();
      ctx.arc((Rangex2) / 2, (Rangey1) / 2, 5, 0, 2 * Math.PI);
-     ctx.fillStyle = 'blue';
+     ctx.fillStyle = 'red';
      ctx.fillText("2", 300, 310)
      ctx.fill();
 
      // Draw blue dot for y1Range
      ctx.beginPath();
      ctx.arc((Rangex1) / 2, (Rangey2) / 2, 5, 0, 2 * Math.PI);
-     ctx.fillStyle = 'blue';
+     ctx.fillStyle = 'red';
      ctx.fillText("3", 180, 310)
      ctx.fill();
 
      // Draw blue dot for y2Range
      ctx.beginPath();
      ctx.arc((Rangex2) / 2, (Rangey2) / 2, 5, 0, 2 * Math.PI);
-     ctx.fillStyle = 'blue';
+     ctx.fillStyle = 'red';
      ctx.fillText("4", 310, 180)
      ctx.fill();
 
 
-      if (
-        x1 >= Rangex1 && x1 <= Rangex2 &&
-        x2 >= Rangex1 && x2 <= Rangex2 &&
-        y1 >= Rangey1 && y1 <= Rangey2 &&
-        y2 >= Rangey1 && y2 <= Rangey2
-      ) {
-        // alert("Your marker is in the perfect position")
-        detectionCounter++; // Increment the counter
-
-        if (detectionCounter === 4) {
-          alert("Your marker is in the perfect position");
-          // Reset the counter after showing the alert
-          detectionCounter = 0;
-        }
+     if (
+      x1 >= Rangex1 &&
+      x1 <= Rangex2 &&
+      x2 >= Rangex1 &&
+      x2 <= Rangex2 &&
+      y1 >= Rangey1 &&
+      y1 <= Rangey2 &&
+      y2 >= Rangey1 &&
+      y2 <= Rangey2
+    ) {
+      detectionCounter++; // Increment the counter
+    
+      if (detectionCounter === 4) {
+        alert("Your marker is in the perfect position");
+        // Reset the counter after showing the alert
+        detectionCounter = 0;
       }
+    }
 
 
       // Cal width in MM
