@@ -141,10 +141,10 @@ export function renderBoxes(canvasRef: HTMLCanvasElement, boxes_data: Float32Arr
 
       // console.log(x1,x2,y1,y2)
 
-      const x1Range = {min: 40, max: 160}
-      const x2Range = {min: 250, max: 260}
-      const y1Range = {min: 160, max: 170}
-      const y2Range = {min: 340, max: 350}
+      const x1Range = {min: 150, max: 180}
+      const x2Range = {min: 310, max: 340}
+      const y1Range = {min: 220, max: 240}
+      const y2Range = {min: 325, max: 345}
 
      // Draw blue dot for x1Range
      ctx.beginPath();
