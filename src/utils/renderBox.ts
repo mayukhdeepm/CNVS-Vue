@@ -135,10 +135,35 @@ export function renderBoxes(canvasRef: HTMLCanvasElement, boxes_data: Float32Arr
 
       // console.log(x1,x2,y1,y2)
 
-      const x1Range = {min: 180, max: 200}
-      const x2Range = {min: 290, max: 310}
-      const y1Range = {min: 150, max: 170}
-      const y2Range = {min: 330, max: 350}
+      const x1Range = {min: 190, max: 200}
+      const x2Range = {min: 300, max: 310}
+      const y1Range = {min: 160, max: 170}
+      const y2Range = {min: 340, max: 350}
+
+     // Draw blue dot for x1Range
+     ctx.beginPath();
+     ctx.arc((x1Range.min + x1Range.max) / 2, (y1Range.min + y1Range.max) / 2, 5, 0, 2 * Math.PI);
+     ctx.fillStyle = 'blue';
+     ctx.fill();
+
+     // Draw blue dot for x2Range
+     ctx.beginPath();
+     ctx.arc((x2Range.min + x2Range.max) / 2, (y1Range.min + y1Range.max) / 2, 5, 0, 2 * Math.PI);
+     ctx.fillStyle = 'blue';
+     ctx.fill();
+
+     // Draw blue dot for y1Range
+     ctx.beginPath();
+     ctx.arc((x1Range.min + x1Range.max) / 2, (y2Range.min + y2Range.max) / 2, 5, 0, 2 * Math.PI);
+     ctx.fillStyle = 'blue';
+     ctx.fill();
+
+     // Draw blue dot for y2Range
+     ctx.beginPath();
+     ctx.arc((x2Range.min + x2Range.max) / 2, (y2Range.min + y2Range.max) / 2, 5, 0, 2 * Math.PI);
+     ctx.fillStyle = 'blue';
+     ctx.fill();
+
 
       if (
           x1 >= x1Range.min &&
