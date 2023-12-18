@@ -111,6 +111,7 @@ const mv = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26
 // }
 
 export let numberTextsForCurrentFrame: string[] = [];
+let detectionCounter = 0;
 
 export function renderBoxes(canvasRef: HTMLCanvasElement, boxes_data: Float32Array | Int32Array | Uint8Array, scores_data: Float32Array | Int32Array | Uint8Array, classes_data: Float32Array | Int32Array | Uint8Array, ratios: any[]) {
   const ctx = canvasRef.getContext('2d');
@@ -141,6 +142,7 @@ export function renderBoxes(canvasRef: HTMLCanvasElement, boxes_data: Float32Arr
 
       // console.log(x1,x2,y1,y2)
 
+      //Coin Calibration Logic
       const x1Range = {min: 245, max: 260}
       const x2Range = {min: 385, max: 400}
       const y1Range = {min: 165, max: 180}
@@ -186,10 +188,59 @@ export function renderBoxes(canvasRef: HTMLCanvasElement, boxes_data: Float32Arr
           y2 <= y2Range.max 
       ) {
         alert("Your marker is in the perfect position")
-        ctx.fillStyle = 'green';
-        ctx.fill();
       }
 
+
+      //FInger nails Calibration Logic
+      const Rangex1 = 30
+      const Rangex2 = 590
+      const Rangey1 = 390
+      const Rangey2 = 560
+
+     // Draw blue dot for x1Range
+     ctx.beginPath();
+     ctx.arc((Rangex1) / 2, (Rangey1) / 2, 5, 0, 2 * Math.PI);
+     ctx.fillStyle = 'blue';
+     ctx.fillText("1", 180, 180)
+     ctx.fill();
+
+     // Draw blue dot for x2Range
+     ctx.beginPath();
+     ctx.arc((Rangex2) / 2, (Rangey1) / 2, 5, 0, 2 * Math.PI);
+     ctx.fillStyle = 'blue';
+     ctx.fillText("2", 300, 310)
+     ctx.fill();
+
+     // Draw blue dot for y1Range
+     ctx.beginPath();
+     ctx.arc((Rangex1) / 2, (Rangey2) / 2, 5, 0, 2 * Math.PI);
+     ctx.fillStyle = 'blue';
+     ctx.fillText("3", 180, 310)
+     ctx.fill();
+
+     // Draw blue dot for y2Range
+     ctx.beginPath();
+     ctx.arc((Rangex2) / 2, (Rangey2) / 2, 5, 0, 2 * Math.PI);
+     ctx.fillStyle = 'blue';
+     ctx.fillText("4", 310, 180)
+     ctx.fill();
+
+
+      if (
+        x1 >= Rangex1 && x1 <= Rangex2 &&
+        x2 >= Rangex1 && x2 <= Rangex2 &&
+        y1 >= Rangey1 && y1 <= Rangey2 &&
+        y2 >= Rangey1 && y2 <= Rangey2
+      ) {
+        // alert("Your marker is in the perfect position")
+        detectionCounter++; // Increment the counter
+
+        if (detectionCounter === 4) {
+          alert("Your marker is in the perfect position");
+          // Reset the counter after showing the alert
+          detectionCounter = 0;
+        }
+      }
 
 
       // Cal width in MM
