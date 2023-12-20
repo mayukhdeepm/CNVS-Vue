@@ -191,60 +191,60 @@ export function renderBoxes(canvasRef: HTMLCanvasElement, boxes_data: Float32Arr
       }
 
 
-      //FInger nails Calibration Logic
-      const Rangex1 = 200;
-      const Rangex2 = 450;
-      const Rangey1 = 280;
-      const Rangey2 = 480;
+    //   //FInger nails Calibration Logic
+    //   const Rangex1 = 70;
+    //   const Rangex2 = 200;
+    //   const Rangey1 = 380;
+    //   const Rangey2 = 200;
 
-      let detectionCounter = 0;
+    //   let detectionCounter=0
 
-       // Draw blue dot for Rangex1
-       ctx.beginPath();
-       ctx.arc((Rangex1 + Rangex2) / 2, (Rangey1 + Rangey2) / 2, 5, 0, 2 * Math.PI);
-       ctx.fillStyle = 'blue';
-       ctx.fillText("5", 320, 400)
-       ctx.fill();
- 
-       // Draw blue dot for Rangex2
-       ctx.beginPath();
-       ctx.arc((Rangex2 + Rangex2) / 2, (Rangey1 + Rangey2) / 2, 5, 0, 2 * Math.PI);
-       ctx.fillStyle = 'blue';
-       ctx.fillText("6", 450, 400)
-       ctx.fill();
- 
-       // Draw blue dot for Rangey1
-       ctx.beginPath();
-       ctx.arc((Rangex1 + Rangex2) / 2, (Rangey1 + Rangey2) / 2, 5, 0, 2 * Math.PI);
-       ctx.fillStyle = 'blue';
-       ctx.fillText("7", 320, 530)
-       ctx.fill();
- 
-       // Draw blue dot for Rangey2
-       ctx.beginPath();
-       ctx.arc((Rangex2 + Rangex2) / 2, (Rangey1 + Rangey2) / 2, 5, 0, 2 * Math.PI);
-       ctx.fillStyle = 'blue';
-       ctx.fillText("8", 450, 530)
-       ctx.fill();
+    //    // Draw blue dot for Rangex1
+    //    ctx.beginPath();
+    //    ctx.arc((Rangex1 + Rangex1 + Rangex1 + Rangex1) / 2, (Rangey1 + Rangey1) / 2, 5, 0, 2 * Math.PI);
+    //    ctx.fillStyle = 'blue';
+    //    ctx.fillText("5", 50, 380);
+    //    ctx.fill();
+       
+    //    // Draw blue dot for Rangex2
+    //    ctx.beginPath();
+    //    ctx.arc((Rangex2 + Rangex2 + Rangex2 + Rangex2 + Rangex2) / 2, (Rangey1 + Rangey1) / 2, 5, 0, 2 * Math.PI);
+    //    ctx.fillStyle = 'blue';
+    //    ctx.fillText("6", 450, 380);
+    //    ctx.fill();
+       
+    //    // Draw blue dot for Rangey1
+    //    ctx.beginPath();
+    //    ctx.arc((Rangex2 + Rangex2) / 2, (Rangey2 + Rangey2) / 2, 5, 0, 2 * Math.PI);
+    //    ctx.fillStyle = 'blue';
+    //    ctx.fillText("7", 50, 530);
+    //    ctx.fill();
+       
+    //    // Draw blue dot for Rangey2
+    //    ctx.beginPath();
+    //    ctx.arc((Rangex2 + Rangex2) / 2, (Rangey1 + Rangey2) / 2, 5, 0, 2 * Math.PI);
+    //    ctx.fillStyle = 'blue';
+    //    ctx.fillText("8", 450, 530);
+    //    ctx.fill();
 
-     if (
-      x1 >= Rangex1 &&
-      x1 <= Rangex2 &&
-      x2 >= Rangex1 &&
-      x2 <= Rangex2 &&
-      y1 >= Rangey1 &&
-      y1 <= Rangey2 &&
-      y2 >= Rangey1 &&
-      y2 <= Rangey2
-    ) {
-      detectionCounter++; // Increment the counter
+    //  if (
+    //   x1 >= Rangex1 &&
+    //   x1 <= Rangex2 &&
+    //   x2 >= Rangex1 &&
+    //   x2 <= Rangex2 &&
+    //   y1 >= Rangey1 &&
+    //   y1 <= Rangey2 &&
+    //   y2 >= Rangey1 &&
+    //   y2 <= Rangey2
+    // ) {
+    //   detectionCounter++; // Increment the counter
     
-      if (detectionCounter === 4) {
-        alert("Your marker is in the perfect position");
-        // Reset the counter after showing the alert
-        detectionCounter = 0;
-      }
-    }
+    //   if (detectionCounter === 4) {
+    //     alert("Your marker is in the perfect position");
+    //     // Reset the counter after showing the alert
+    //     detectionCounter = 0;
+    //   }
+    // }
 
 
       // Cal width in MM
