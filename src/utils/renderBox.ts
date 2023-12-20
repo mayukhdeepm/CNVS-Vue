@@ -187,11 +187,57 @@ export function renderBoxes(canvasRef: HTMLCanvasElement, boxes_data: Float32Arr
           y2 >= y2Range.min &&
           y2 <= y2Range.max 
       ) {
-        alert("Your marker is in the perfect position")
+        alert("Marker position calibrated")
       }
 
 
     //   //FInger nails Calibration Logic
+    const Rangex1 = {min: 240, max: 250}
+    const Rangex2 = {min: 395, max: 405}
+    const Rangey1 = {min: 390, max: 400}
+    const Rangey2 = {min: 495, max: 505}
+
+   // Draw blue dot for x1Range
+   ctx.beginPath();
+   ctx.arc((Rangex1.min + Rangex1.max) / 2, (Rangey1.min + Rangey1.max) / 2, 5, 0, 2 * Math.PI);
+   ctx.fillStyle = 'blue';
+   ctx.fillText("1", 180, 180)
+   ctx.fill();
+
+   // Draw blue dot for x2Range
+   ctx.beginPath();
+   ctx.arc((Rangex2.min + Rangex2.max) / 2, (Rangey1.min + Rangey1.max) / 2, 5, 0, 2 * Math.PI);
+   ctx.fillStyle = 'blue';
+   ctx.fillText("2", 300, 310)
+   ctx.fill();
+
+   // Draw blue dot for y1Range
+   ctx.beginPath();
+   ctx.arc((Rangex1.min + Rangex1.max) / 2, (Rangey2.min + Rangey2.max) / 2, 5, 0, 2 * Math.PI);
+   ctx.fillStyle = 'blue';
+   ctx.fillText("3", 180, 310)
+   ctx.fill();
+
+   // Draw blue dot for y2Range
+   ctx.beginPath();
+   ctx.arc((Rangex2.min + Rangex2.max) / 2, (Rangey2.min + Rangey2.max) / 2, 5, 0, 2 * Math.PI);
+   ctx.fillStyle = 'blue';
+   ctx.fillText("4", 310, 180)
+   ctx.fill();
+
+
+    if (
+        x1 >= Rangex1.min &&
+        x1 <= Rangex1.max &&
+        x2 >= Rangex2.min &&
+        x2 <= Rangex2.max &&
+        y1 >= Rangey1.min &&
+        y1 <= Rangey1.max &&
+        y2 >= Rangey2.min &&
+        y2 <= Rangey2.max 
+    ) {
+      alert("Nails position calibrated")
+    }
     //   const Rangex1 = 70;
     //   const Rangex2 = 200;
     //   const Rangey1 = 380;
