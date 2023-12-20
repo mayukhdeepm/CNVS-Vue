@@ -152,28 +152,28 @@ export function renderBoxes(canvasRef: HTMLCanvasElement, boxes_data: Float32Arr
      ctx.beginPath();
      ctx.arc((x1Range.min + x1Range.max) / 2, (y1Range.min + y1Range.max) / 2, 5, 0, 2 * Math.PI);
      ctx.fillStyle = 'blue';
-     ctx.fillText("1", 180, 180)
+     ctx.fillText("1", 230, 170)
      ctx.fill();
 
      // Draw blue dot for x2Range
      ctx.beginPath();
      ctx.arc((x2Range.min + x2Range.max) / 2, (y1Range.min + y1Range.max) / 2, 5, 0, 2 * Math.PI);
      ctx.fillStyle = 'blue';
-     ctx.fillText("2", 300, 310)
+     ctx.fillText("2", 380, 300)
      ctx.fill();
 
      // Draw blue dot for y1Range
      ctx.beginPath();
      ctx.arc((x1Range.min + x1Range.max) / 2, (y2Range.min + y2Range.max) / 2, 5, 0, 2 * Math.PI);
      ctx.fillStyle = 'blue';
-     ctx.fillText("3", 180, 310)
+     ctx.fillText("3", 230, 300)
      ctx.fill();
 
      // Draw blue dot for y2Range
      ctx.beginPath();
      ctx.arc((x2Range.min + x2Range.max) / 2, (y2Range.min + y2Range.max) / 2, 5, 0, 2 * Math.PI);
      ctx.fillStyle = 'blue';
-     ctx.fillText("4", 310, 180)
+     ctx.fillText("4", 380, 170)
      ctx.fill();
 
 
@@ -192,37 +192,37 @@ export function renderBoxes(canvasRef: HTMLCanvasElement, boxes_data: Float32Arr
 
 
     //   //FInger nails Calibration Logic
-    const Rangex1 = {min: 235, max: 250}
-    const Rangex2 = {min: 390, max: 405}
+    const Rangex1 = {min: 235, max: 50}
+    const Rangex2 = {min: 390, max: 600}
     const Rangey1 = {min: 385, max: 400}
-    const Rangey2 = {min: 490, max: 505}
+    const Rangey2 = {min: 490, max: 600}
 
    // Draw blue dot for x1Range
    ctx.beginPath();
    ctx.arc((Rangex1.min + Rangex1.max) / 2, (Rangey1.min + Rangey1.max) / 2, 5, 0, 2 * Math.PI);
    ctx.fillStyle = 'blue';
-   ctx.fillText("1", 180, 180)
+   ctx.fillText("5", 140, 400)
    ctx.fill();
 
    // Draw blue dot for x2Range
    ctx.beginPath();
    ctx.arc((Rangex2.min + Rangex2.max) / 2, (Rangey1.min + Rangey1.max) / 2, 5, 0, 2 * Math.PI);
    ctx.fillStyle = 'blue';
-   ctx.fillText("2", 300, 310)
+   ctx.fillText("6", 490, 510)
    ctx.fill();
 
    // Draw blue dot for y1Range
    ctx.beginPath();
    ctx.arc((Rangex1.min + Rangex1.max) / 2, (Rangey2.min + Rangey2.max) / 2, 5, 0, 2 * Math.PI);
    ctx.fillStyle = 'blue';
-   ctx.fillText("3", 180, 310)
+   ctx.fillText("7", 140, 510)
    ctx.fill();
 
    // Draw blue dot for y2Range
    ctx.beginPath();
    ctx.arc((Rangex2.min + Rangex2.max) / 2, (Rangey2.min + Rangey2.max) / 2, 5, 0, 2 * Math.PI);
    ctx.fillStyle = 'blue';
-   ctx.fillText("4", 310, 180)
+   ctx.fillText("8", 490, 400)
    ctx.fill();
 
 
