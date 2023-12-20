@@ -192,10 +192,10 @@ export function renderBoxes(canvasRef: HTMLCanvasElement, boxes_data: Float32Arr
 
 
     //   //FInger nails Calibration Logic
-    const Rangex1 = {min: 240, max: 250}
-    const Rangex2 = {min: 395, max: 405}
-    const Rangey1 = {min: 390, max: 400}
-    const Rangey2 = {min: 495, max: 505}
+    const Rangex1 = {min: 235, max: 250}
+    const Rangex2 = {min: 390, max: 405}
+    const Rangey1 = {min: 385, max: 400}
+    const Rangey2 = {min: 490, max: 505}
 
    // Draw blue dot for x1Range
    ctx.beginPath();
