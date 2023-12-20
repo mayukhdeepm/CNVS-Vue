@@ -192,52 +192,57 @@ export function renderBoxes(canvasRef: HTMLCanvasElement, boxes_data: Float32Arr
 
 
     //   //FInger nails Calibration Logic
-    const Rangex1 = {min: 235, max: 50}
-    const Rangex2 = {min: 390, max: 600}
-    const Rangey1 = {min: 385, max: 400}
-    const Rangey2 = {min: 490, max: 600}
+    // const Rangex1 = {min: 235, max: 50}
+    // const Rangex2 = {min: 390, max: 600}
+    // const Rangey1 = {min: 385, max: 400}
+    // const Rangey2 = {min: 490, max: 600}
+
+    // const Rangex1 = {min: 235, max: 50}
+    // const Rangex2 = {min: 390, max: 200}
+    // const Rangey1 = {min: 385, max: 400}
+    // const Rangey2 = {min: 490, max: 600}
 
    // Draw blue dot for x1Range
    ctx.beginPath();
-   ctx.arc((Rangex1.min + Rangex1.max) / 2, (Rangey1.min + Rangey1.max) / 2, 5, 0, 2 * Math.PI);
+   ctx.arc(150, 350, 5, 0, 2 * Math.PI);
    ctx.fillStyle = 'blue';
    ctx.fillText("5", 140, 400)
    ctx.fill();
 
    // Draw blue dot for x2Range
    ctx.beginPath();
-   ctx.arc((Rangex2.min + Rangex2.max) / 2, (Rangey1.min + Rangey1.max) / 2, 5, 0, 2 * Math.PI);
+   ctx.arc(150, 500, 5, 0, 2 * Math.PI);
    ctx.fillStyle = 'blue';
    ctx.fillText("6", 490, 510)
    ctx.fill();
 
    // Draw blue dot for y1Range
    ctx.beginPath();
-   ctx.arc((Rangex1.min + Rangex1.max) / 2, (Rangey2.min + Rangey2.max) / 2, 5, 0, 2 * Math.PI);
+   ctx.arc(500, 500, 5, 0, 2 * Math.PI);
    ctx.fillStyle = 'blue';
    ctx.fillText("7", 140, 510)
    ctx.fill();
 
    // Draw blue dot for y2Range
    ctx.beginPath();
-   ctx.arc((Rangex2.min + Rangex2.max) / 2, (Rangey2.min + Rangey2.max) / 2, 5, 0, 2 * Math.PI);
+   ctx.arc(500, 350, 5, 0, 2 * Math.PI);
    ctx.fillStyle = 'blue';
    ctx.fillText("8", 490, 400)
    ctx.fill();
 
 
-    if (
-        x1 >= Rangex1.min &&
-        x1 <= Rangex1.max &&
-        x2 >= Rangex2.min &&
-        x2 <= Rangex2.max &&
-        y1 >= Rangey1.min &&
-        y1 <= Rangey1.max &&
-        y2 >= Rangey2.min &&
-        y2 <= Rangey2.max 
-    ) {
-      alert("Nails position calibrated")
-    }
+    // if (
+    //     x1 >= Rangex1.min &&
+    //     x1 <= Rangex1.max &&
+    //     x2 >= Rangex2.min &&
+    //     x2 <= Rangex2.max &&
+    //     y1 >= Rangey1.min &&
+    //     y1 <= Rangey1.max &&
+    //     y2 >= Rangey2.min &&
+    //     y2 <= Rangey2.max 
+    // ) {
+    //   alert("Nails position calibrated")
+    // }
     //   const Rangex1 = 70;
     //   const Rangex2 = 200;
     //   const Rangey1 = 380;
